@@ -1,0 +1,32 @@
+### Get all movies
+GET http://localhost:22522/movies
+
+### Get movie by Id
+GET http://localhost:22522/movies/5
+
+### Get movie by Id
+GET http://localhost:22522/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+
+### Get movie by category
+GET http://localhost:22522/movies?genre=sci-Fi
+
+### Create a movie
+POST http://localhost:22522/movies
+Content-Type: application/json
+
+{
+  "title": "The Godfather",
+  "year": 1975 ,
+  "director": "Francis Ford Coppla",
+  "duration": 175,
+  "poster": "https://vice-press.com/cdn/shop/products/Jurassic-Park-Editions-poster-florey.jpg?v=1654518755&width=1024",
+  "genre": ["Crime", "Drama"]
+}
+
+### Update a movie
+PATCH http://localhost:22522/movies/5ad1a235-0d9c-410a-b32b-220d91689a08
+Content-Type: application/json
+
+{
+  "year":1993
+}
